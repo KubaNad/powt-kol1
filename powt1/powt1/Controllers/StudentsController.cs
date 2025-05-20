@@ -20,7 +20,7 @@ public class StudentsController(IDbService dbService) : ControllerBase
     {
         try
         {
-            return Ok(dbService.CreateStudentWithGroups(student));
+            return Ok(await dbService.CreateStudentWithGroups(student));
 
         }
         catch (NotFoundException e)
